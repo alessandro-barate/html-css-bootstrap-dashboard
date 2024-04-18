@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Bootstrap Dashboard</title>
 </head>
 <body>
@@ -85,57 +86,127 @@
                     </div>
                 </div>
 
-                <div class="col-md-9 px-5 pt-4 text-center min-vh-100">
-                    <div class="bg-danger px-4 pt-5">
-                        <div class="content">
-                            <h2>Trova il piano perfetto per te!</h2>
-                            <p>Scegli tra le nostre opzioni di abbonamento e goditi funzionalità esclusive e performance migliori.</p>
-                            <p>Porta la tua esperienza al livello successivo!</p>
-                            <div class="mb-5">
-                                <button type="button" class="btn btn-primary btn-lg rounded-pill">Scopri di più</button>
-                                <button type="button" class="btn btn-outline-secondary btn-lg rounded-pill">Contattaci</button>
-                            </div>
+                <div class="col-md-9 px-5 pt-4 min-vh-100">
+                    <div class="bg-danger">
+                        <div class="content d-flex justify-content-between">
+                            <h2 class="ms-2">10 prodotti trovati</h2>
+                            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                                <div class="btn-group me-2 bg-white mt-2" role="group" aria-label="First group">
+                                  <button type="button" class="btn btn-outline-secondary">Esporta</button>
+                                  <button type="button" class="btn btn-outline-secondary">Nuovo</button>
+                                </div>
+                            </div>  
                         </div>
 
-                        <div class="row d-xs-block d-sm-block d-md-block d-lg-flex justify-content-center mb-5 pb-5">
-                            <div class="col col-lg-4">
-                                <div class="card mb-5">
-                                    <div class="card-header">
-                                        Featured
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Special title treatment</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <hr>
 
-                            <div class="col col-lg-4">
-                                <div class="card mb-5">
-                                    <div class="card-header">
-                                        Featured
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Special title treatment</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col col-lg-4">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Featured
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Special title treatment</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="row d-xs-block d-sm-block d-md-block d-lg-flex justify-content-center mx-1 mb-5 pb-5">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Prezzo</th>
+                                    <th scope="col">Stato</th>
+                                    <th scope="col">Azioni</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">
+                                        <div>
+                                            <img src="./assets/mountain.png" alt="" style="width: 50px; height: 70px;"><span>Smartphone Samsung Galaxy S21</span>
+                                            <span>Display AMOLED, fotocamera Ultra Wide, batteria a lunga durata</span>
+                                        </div>
+                                    </th>
+                                    <td>799.00&euro;</td>
+                                    <td>------</td>
+                                    <td class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-can"></i></button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>1299.00&euro;</td>
+                                    <td>------</td>
+                                    <td class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-can"></i></button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>429.00&euro;</td>
+                                    <td>------</td>
+                                    <td class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-can"></i></button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>279.00&euro;</td>
+                                    <td>------</td>
+                                    <td class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-can"></i></button></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>499.00&euro;</td>
+                                    <td>------</td>
+                                    <td class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-can"></i></button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>999.00&euro;</td>
+                                    <td>------</td>
+                                    <td class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-can"></i></button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>159.00&euro;</td>
+                                    <td>------</td>
+                                    <td class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-can"></i></button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>199.00&euro;</td>
+                                    <td>------</td>
+                                    <td class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-can"></i></button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>229.00&euro;</td>
+                                    <td>------</td>
+                                    <td class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-can"></i></button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>79.99&euro;</td>
+                                    <td>------</td>
+                                    <td class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-can"></i></button>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
                         </div>
                     </div>
                 </div>
