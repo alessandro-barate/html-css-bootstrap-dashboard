@@ -8,6 +8,8 @@
     <title>Bootstrap Dashboard</title>
 </head>
 <body>
+
+    <!-- NavBar con panino a detra -->
     <header class="bg-dark">
         <div class="container">
             <nav class="navbar navbar-expand-md d-md-none" data-bs-theme="dark">
@@ -19,19 +21,22 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Dashboard</a>
+                                <a class="nav-link" href="#">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Sponsorizzazioni</a>
+                                <a class="nav-link" href="./index.html">Sponsorizzazioni</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Prodotti</a>
+                                <a class="nav-link active" aria-current="page" href="#">Prodotti</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Nuovo Prodotto</a>
+                                <a class="nav-link" href="./new-product.html">Nuovo Prodotto</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Clienti</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><hr></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Impostazioni</a>
@@ -48,29 +53,34 @@
             </nav>
         </div>
     </header>
+    <!-- FINE NavBar con panino a detra -->
 
     <main>
-        <div class="container">
+
+        <!-- Contenitore principale -->
+        <div class="container-fluid">
             <div class="row d-block d-md-flex justify-content-center">
-                <div class="col-md-3 d-none d-md-block bg-dark min-vh-100 justify-content-center">
-                    <div class="d-none d-md-flex flex-column flex-shrink-0 p-3 text-bg-dark">
+
+                <!-- SideBar a sinistra -->
+                <div class="col-md-2 d-none d-md-block bg-dark min-vh-100 justify-content-center">
+                    <div class="d-none d-md-flex flex-column flex-shrink-0 pt-2 text-bg-dark">
                         <span class="fs-4">Bootstrap Dashboard</span>
                         <hr>
                         <ul class="nav nav-pills flex-column mb-4">
                             <li class="nav-item">
-                                <a href="#" class="nav-link text-white">Dashboard</a>
+                                <a href="#" class="nav-link text-white"><i class="fas fa-house-chimney me-2"></i>Dashboard</a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link active text-white" aria-current="page">Sponsorizzazioni</a>
+                                <a href="./index.html" class="nav-link text-white"><i class="fas fa-chart-line me-2"></i>Sponsorizzazioni</a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link text-white">Orders</a>
+                                <a href="#" class="nav-link active text-white" aria-current="page"><i class="fas fa-box-archive me-2"></i>Prodotti</a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link text-white">Products</a>
+                                <a href="./new-product.html" class="nav-link text-white"><i class="fas fa-plus me-2"></i>Nuovo Prodotto</a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link text-white">Customers</a>
+                                <a href="#" class="nav-link text-white"><i class="fas fa-user-tie me-2"></i>Clienti</a>
                             </li>
                         </ul>
                         <div class="dropdown">
@@ -85,9 +95,13 @@
                         </div>
                     </div>
                 </div>
+                <!-- FINE SideBar a sinistra -->
 
-                <div class="col-md-9 px-5 pt-4 min-vh-100">
+                <!-- Contenitore prodotti -->
+                <div class="col-md-10 px-5 pt-4 min-vh-100">
                     <div>
+
+                        <!-- Intestazione pagina con 2 bottoni -->
                         <div class="content d-flex justify-content-between">
                             <h2 class="ms-2">10 prodotti trovati</h2>
                             <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
@@ -97,9 +111,11 @@
                                 </div>
                             </div>  
                         </div>
+                        <!-- FINE Intestazione pagina con 2 bottoni -->
 
                         <hr>
 
+                        <!-- Tabella -->
                         <div class="row d-xs-block d-sm-block d-md-block d-lg-flex justify-content-center mx-1 mb-5 pb-5">
                             <table class="table align-middle">
                                 <thead>
@@ -110,200 +126,227 @@
                                     <th scope="col" class="text-center">Azioni</th>
                                   </tr>
                                 </thead>
+
+
+
+
+
+
                                 <tbody>
-                                  <tr>
-                                    <th scope="row">
-                                        <dl class="row mb-0">
-                                            <dt class="col-1 me-4">
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
                                                 <img src="./assets/mountains.jpg" alt="" style="width: 50px; height: 50px;">
-                                            </dt>
-                                            <dd class="col-10">Smartphone Samsung Galaxy S21</dd>
-                                        </dl>
-                                    </th>
-                                    <td class="text-center">799.00&euro;</td>
-                                    <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
-                                    <td>
-                                        <div class="d-flex gap-1 justify-content-center">
-                                            <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
-                                        </div>
+                                                <div class="ms-2">
+                                                    <p class="mb-0">Smartphone Samsung Galaxy S21</p>
+                                                    <p class="mb-0 fw-medium text-secondary">Display AMOLED, fotocamera Ultra Wide, batteria a lunga durata</p>
+                                                </div>
+                                            </div>
+                                            
+                                        </th>
+                                        <td class="text-center">799.00&euro;</td>
+                                        <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
+                                        <td>
+                                            <div class="d-flex gap-1 justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
 
-                                        
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <img src="./assets/mountains.jpg" alt="" style="width: 50px; height: 50px;">
+                                                <div class="ms-2">
+                                                    <p class="mb-0">Apple MacBook Pro 13"</p>
+                                                    <p class="mb-0 fw-medium text-secondary">Processore M1, SSD ultraveloce, display Retina</p>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="text-center">1299.00&euro;</td>
+                                        <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
+                                        <td>
+                                            <div class="d-flex gap-1 justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
 
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">
-                                        <dl class="row mb-0">
-                                            <dt class="col-1 me-4">
-                                                <img src="./assets/mountains.jpg"" alt="" style="width: 50px; height: 50px;">
-                                            </dt>
-                                            <dd class="col-10">Apple MacBook Pro 13"</dd>
-                                        </dl>
-                                    </th>
-                                    <td class="text-center">1299.00&euro;</td>
-                                    <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
-                                    <td>
-                                        <div class="d-flex gap-1 justify-content-center">
-                                            <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
-                                        </div>
-                                    </td>
-                                  </tr>
-                                  <tr >
-                                    <th scope="row">
-                                        <dl class="row mb-0">
-                                            <dt class="col-1 me-4">
-                                                <img src="./assets/mountains.jpg"" alt="" style="width: 50px; height: 50px;">
-                                            </dt>
-                                            <dd class="col-10">Smartwatch Apple Watch Series 6</dd>
-                                        </dl>
-                                    </th>
-                                    <td class="text-center">429.00&euro;</td>
-                                    <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
-                                    <td>
-                                        <div class="d-flex gap-1 justify-content-center">
-                                            <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
-                                        </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">
-                                        <dl class="row mb-0">
-                                            <dt class="col-1 me-4">
-                                                <img src="./assets/mountains.jpg"" alt="" style="width: 50px; height: 50px;">
-                                            </dt>
-                                            <dd class="col-10">Auricolari Wireless Apple AirPods Pro</dd>
-                                        </dl>
-                                    </th>
-                                    <td class="text-center">279.00&euro;</td>
-                                    <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
-                                    <td>
-                                        <div class="d-flex gap-1 justify-content-center">
-                                            <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
-                                        </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">
-                                        <dl class="row mb-0">
-                                            <dt class="col-1 me-4">
-                                                <img src="./assets/mountains.jpg"" alt="" style="width: 50px; height: 50px;">
-                                            </dt>
-                                            <dd class="col-10">Console Sony Playstation 5</dd>
-                                        </dl>
-                                    </th>
-                                    <td class="text-center">499.00&euro;</td>
-                                    <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
-                                    <td>
-                                        <div class="d-flex gap-1 justify-content-center">
-                                            <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
-                                        </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">
-                                        <dl class="row mb-0">
-                                            <dt class="col-1 me-4">
-                                                <img src="./assets/mountains.jpg"" alt="" style="width: 50px; height: 50px;">
-                                            </dt>
-                                            <dd class="col-10">Monitor Gaming ASUS ROG Strix XG27UQ</dd>
-                                        </dl>
-                                    </th>
-                                    <td class="text-center">999.00&euro;</td>
-                                    <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
-                                    <td>
-                                        <div class="d-flex gap-1 justify-content-center">
-                                            <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
-                                        </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">
-                                        <dl class="row mb-0">
-                                            <dt class="col-1 me-4">
-                                                <img src="./assets/mountains.jpg"" alt="" style="width: 50px; height: 50px;">
-                                            </dt>
-                                            <dd class="col-10">Stampante Multifunzione HP Laser Jet Pro M28w</dd>
-                                        </dl>
-                                    </th>
-                                    <td class="text-center">159.00&euro;</td>
-                                    <td class="text-center"><button class="btn btn-outline-danger rounded-circle"><i class="fas fa-xmark text-danger"></i></button></td>
-                                    <td>
-                                        <div class="d-flex gap-1 justify-content-center">
-                                            <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
-                                        </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">
-                                        <dl class="row mb-0">
-                                            <dt class="col-1 me-4">
+                                    <tr >
+                                        <th scope="row">
+                                            <div class="d-flex">
                                                 <img src="./assets/mountains.jpg" alt="" style="width: 50px; height: 50px;">
-                                            </dt>
-                                            <dd class="col-10">Router Wi-Fi Mesh TP-Link Deco X20</dd>
-                                        </dl>
-                                    </th>
-                                    <td class="text-center">199.00&euro;</td>
-                                    <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
-                                    <td>
-                                        <div class="d-flex gap-1 justify-content-center">
-                                            <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
-                                        </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">
-                                        <dl class="row mb-0">
-                                            <dt class="col-1 me-4">
+                                                <div class="ms-2">
+                                                    <p class="mb-0">Smartwatch Apple Watch Series 6</p>
+                                                    <p class="mb-0 fw-medium text-secondary">Monitoraggio attività, misurazione ossigeno nel sangue, display Always-On</p>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="text-center">429.00&euro;</td>
+                                        <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
+                                        <td>
+                                            <div class="d-flex gap-1 justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
                                                 <img src="./assets/mountains.jpg" alt="" style="width: 50px; height: 50px;">
-                                            </dt>
-                                            <dd class="col-10">SSD NVMe Western Digital Black SN850</dd>
-                                        </dl>
-                                    </th>
-                                    <td class="text-center">229.00&euro;</td>
-                                    <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
-                                    <td>
-                                        <div class="d-flex gap-1 justify-content-center">
-                                            <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
-                                        </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">
-                                        <dl class="row mb-0">
-                                            <dt class="col-1 me-4">
+                                                <div class="ms-2">
+                                                    <p class="mb-0">Auricolari Wireless Apple AirPods Pro</p>
+                                                    <p class="mb-0 fw-medium text-secondary">Cancellazione attiva del rumore, resistenza all'acqua e al sudore</p>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="text-center">279.00&euro;</td>
+                                        <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
+                                        <td>
+                                            <div class="d-flex gap-1 justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
                                                 <img src="./assets/mountains.jpg" alt="" style="width: 50px; height: 50px;">
-                                            </dt>
-                                            <dd class="col-10">Mouse Gaming Logitech G502 HERO</dd>
-                                        </dl>
-                                    </th>
-                                    <td class="text-center">79.99&euro;</td>
-                                    <td class="text-center"><button class="btn btn-outline-danger rounded-circle"><i class="fas fa-xmark text-danger"></i></button></td>
-                                    <td>
-                                        <div class="d-flex gap-1 justify-content-center">
-                                            <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
-                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
-                                        </div>
-                                    </td>
-                                  </tr>
+                                                <div class="ms-2">
+                                                    <p class="mb-0">Console Sony PlayStation 5</p>
+                                                    <p class="mb-0 fw-medium text-secondary">Gaming ad alta definizione, tempi di caricamento rapidi, supporto per giochi 4K</p>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="text-center">499.00&euro;</td>
+                                        <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
+                                        <td>
+                                            <div class="d-flex gap-1 justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <img src="./assets/mountains.jpg" alt="" style="width: 50px; height: 50px;">
+                                                <div class="ms-2">
+                                                    <p class="mb-0">Monitor Gaming ASUS ROG Strix XG27UQ</p>
+                                                    <p class="mb-0 fw-medium text-secondary">Schermo 4K UHD, frequenza di aggiornamento 144Hz, tecnologia HDR</p>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="text-center">999.00&euro;</td>
+                                        <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
+                                        <td>
+                                            <div class="d-flex gap-1 justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <img src="./assets/mountains.jpg" alt="" style="width: 50px; height: 50px;">
+                                                <div class="ms-2">
+                                                    <p class="mb-0">Stampante Multifunzione HP Laser Jet Pro MFP M287w</p>
+                                                    <p class="mb-0 fw-medium text-secondary">Stampa, scansione, copia, connessione Wi-Fi</p>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="text-center">159.00&euro;</td>
+                                        <td class="text-center"><button class="btn btn-outline-danger rounded-circle"><i class="fas fa-xmark text-danger"></i></button></td>
+                                        <td>
+                                            <div class="d-flex gap-1 justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <img src="./assets/mountains.jpg" alt="" style="width: 50px; height: 50px;">
+                                                <div class="ms-2">
+                                                    <p class="mb-0">Router Wi-Fi Mesh TP-Link Deco X20</p>
+                                                    <p class="mb-0 fw-medium text-secondary">Copertura fino a 560 mq, velocità fino a 1800 Mbps, gestione tramite app</p>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="text-center">199.00&euro;</td>
+                                        <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
+                                        <td>
+                                            <div class="d-flex gap-1 justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <img src="./assets/mountains.jpg" alt="" style="width: 50px; height: 50px;">
+                                                <div class="ms-2">
+                                                    <p class="mb-0">SSD NVMe western Digital Black SN850</p>
+                                                    <p class="mb-0 fw-medium text-secondary">Capacità 1TB, velocità di lettura fino a 7000MB/s, tecnologia PCIe Gen4</p>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="text-center">229.00&euro;</td>
+                                        <td class="text-center"><button class="btn btn-outline-success rounded-circle"><i class="fas fa-check text-success"></i></button></td>
+                                        <td>
+                                            <div class="d-flex gap-1 justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex">
+                                                <img src="./assets/mountains.jpg" alt="" style="width: 50px; height: 50px;">
+                                                <div class="ms-2">
+                                                    <p class="mb-0">Mouse Gaming Logitech G502 HERO</p>
+                                                    <p class="mb-0 fw-medium text-secondary">Sensore HERO 25K, 11 pulsanti programmabili, peso personalizzabile</p>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="text-center">79.99&euro;</td>
+                                        <td class="text-center"><button class="btn btn-outline-danger rounded-circle"><i class="fas fa-xmark text-danger"></i></button></td>
+                                        <td>
+                                            <div class="d-flex gap-1 justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary me-2"><i class="fas fa-pen-to-square"></i></button>
+                                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-can"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
+                        <!-- FINE Tabella -->
+
                     </div>
                 </div>
+                <!-- FINE Contenitore prodotti -->
+
             </div>
         </div>
+        <!-- FINE Contenitore principale -->
 
         <!-- Codice Modal per rimuovere oggetto dal carrello -->
-
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -325,7 +368,6 @@
                 </div>
             </div>
         </div>
-
         <!-- FINE Codice Modal per rimuovere oggetto dal carrello -->
 
     </main>
